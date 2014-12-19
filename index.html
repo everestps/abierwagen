@@ -1,10 +1,12 @@
 <!doctype html>
 <html>
   <head>
-    <title>App Router</title>
+    <title>Alex's Website</title>
     <link rel="stylesheet" href="http://cdn.smtcs.rocks/bs/bs.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="http://cdn.smtcs.rocks/pl/wc.js"></script>
     <link rel="import" href="http://cdn.smtcs.rocks/pl/pl.html" />
-    <link rel="import" href="bower_components/app-router/app-router.html"/>
+    <link rel="import" href="bower_components/app-router/app-router.html" />
   </head>
   <body>
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -26,6 +28,7 @@
       <app-route path="/home" import="pages/home-page.html"></app-route>
       <app-route path="/about" import="pages/about-page.html"></app-route>
       <app-route path="/html" import="pages/html-page.html"></app-route>
+      <app-route path="/hardware" import="pages/hardware-page.html"></app-route>
 
       <app-route path="*" redirect="/home"></app-route>
     </app-router>
