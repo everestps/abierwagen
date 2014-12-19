@@ -2,17 +2,34 @@
 <html>
   <head>
     <title>App Router</title>
+    <link rel="stylesheet" href="http://cdn.smtcs.rocks/bs/bs.css" />
     <link rel="import" href="http://cdn.smtcs.rocks/pl/pl.html" />
     <link rel="import" href="/bower_components/app-router/app-router.html"/>
   </head>
   <body>
-    <app-router>
-      <!-- matches an exact path -->
-      <app-route path="/about" import="/pages/about.html"></app-route>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#/">Alex's Website</a>
+        </div>
+        <div class="collapse navbar-collapse" ng-controller="HeadCtrl">
+          <ul class="nav navbar-nav">
+            <li><a href="#/home">Home</a></li>
+            <li><a href="#/html">HTML</a></li>
+            <li><a href="#/about">About Me</a></li>
+            <li><a href="#/hardware">Hardware</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <app-router mode="hash">
+      <app-route path="/home" import="/pages/home-page.html"></app-route>
+      <app-route path="/about" import="/pages/about-page.html"></app-route>
+      <app-route path="/html" import="/pages/html-page.html"></app-route>
 
-      <!-- matches everything else -->
-      <app-route path="*" import="/pages/not-found.html"></app-route>
+      <app-route path="*" redirect="/home"></app-route>
     </app-router>
-    <a is="pushstate-anchor" href="/about">About</a>
+    <script src="http://cdn.smtcs.rocks/jq/2.js"></script>
+    <script src="http://cdn.smtcs.rocks/bs/bs.js"></script>
   </body>
 </html>
