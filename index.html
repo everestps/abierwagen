@@ -16,7 +16,7 @@
         </div>
         <div class="collapse navbar-collapse" ng-controller="HeadCtrl">
           <ul class="nav navbar-nav">
-            <li><a href="#/home">Home</a></li>
+            <li><a href="#/">Home</a></li>
             <li><a href="#/html">HTML</a></li>
             <li><a href="#/about">About Me</a></li>
             <li><a href="#/hardware">Hardware</a></li>
@@ -26,13 +26,12 @@
     </nav>
     <div class="container">
       <app-router mode="hash">
-        <app-route path="/home" import="pages/home-page.html"></app-route>
+        <app-route path="/" import="pages/home-page.html"></app-route>
         <app-route path="/html" import="pages/html-page.html"></app-route>
         <app-route path="/about" import="pages/about-page.html"></app-route>
         <app-route path="/hardware" import="pages/hardware-page.html"></app-route>
         <app-route path="/404" import="pages/not-found-page.html"></app-route>
 
-        <app-route path="/" redirect="/home"></app-route>
         <app-route path="*" redirect="/404"></app-route>
       </app-router>
     </div>
