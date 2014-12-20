@@ -1,3 +1,5 @@
 .round {
   border-radius: 100px;
+  float: left;
+  margin-right: 5px;
 }

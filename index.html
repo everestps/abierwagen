@@ -24,14 +24,17 @@
         </div>
       </div>
     </nav>
-    <app-router mode="hash">
-      <app-route path="/home" import="pages/home-page.html"></app-route>
-      <app-route path="/about" import="pages/about-page.html"></app-route>
-      <app-route path="/html" import="pages/html-page.html"></app-route>
-      <app-route path="/hardware" import="pages/hardware-page.html"></app-route>
+    <div class="container">
+      <app-router mode="hash">
+        <app-route path="/home" import="pages/home-page.html"></app-route>
+        <app-route path="/html" import="pages/html-page.html"></app-route>
+        <app-route path="/about" import="pages/about-page.html"></app-route>
+        <app-route path="/hardware" import="pages/hardware-page.html"></app-route>
+        <app-route path="/404" import="pages/not-found-page.html"></app-route>
 
-      <app-route path="*" redirect="/home"></app-route>
-    </app-router>
+        <app-route path="*" redirect="/404"></app-route>
+      </app-router>
+    </div>
     <script src="http://cdn.smtcs.rocks/jq/2.js"></script>
     <script src="http://cdn.smtcs.rocks/bs/bs.js"></script>
     <script type="text/javascript">
