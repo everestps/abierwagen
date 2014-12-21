@@ -35,6 +35,14 @@
         <app-route path="*" redirect="/404"></app-route>
       </app-router>
     </div>
+    <script>
+      window.addEventListener('WebComponentsReady', function() {
+        var router = document.querySelector('app-router');
+        router.addEventListener('state-change', function(event) {
+          _gauges.push(['track']);
+        });
+      });
+    </script>
     <script src="http://cdn.smtcs.rocks/jq/2.js"></script>
     <script src="http://cdn.smtcs.rocks/bs/bs.js"></script>
     <script type="text/javascript">
